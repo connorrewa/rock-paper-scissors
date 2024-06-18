@@ -48,6 +48,9 @@ button:hover {
     background-color:pink;
 }
 
+a {
+    color: purple;
+}
 a:hover {
-    color:purple;
+    color:darkgray;
 }
