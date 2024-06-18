@@ -1,0 +1,53 @@
+body, html {
+    background-color: #222222;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+.container {
+    width: 70%;
+    height: 50%;
+    display: flex;
+    background-color: grey;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 60px;
+    gap:48px;
+    border-radius: 20px;
+    flex: 1;
+    margin-inline: 100px;
+}
+
+.names {
+    margin-top: -26px;
+    color:purple;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    color: purple;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    padding: 12px 20px;
+    border-radius: 16px;;
+    flex-grow:1
+}
+
+button:hover {
+    background-color:pink;
+}
+
+a:hover {
+    color:purple;
+}

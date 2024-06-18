@@ -2,6 +2,28 @@
 let humanScore = 0;
 let computerScore = 0;
 
+
+rockButton = document.querySelector("#rock");
+paperButton = document.querySelector("#paper");
+scissorButton = document.querySelector("#scissor");
+
+rockButton.addEventListener("click", () => {
+    console.log("rock pressed");
+    if (humanScore < 5 && computerScore < 5)
+        playRound("rock");
+});
+paperButton.addEventListener("click", () => {
+    console.log("paper pressed");
+    if (humanScore < 5 && computerScore < 5)
+        playRound("paper");
+});
+scissorButton.addEventListener("click", () => {
+    console.log("scissor pressed");
+    if (humanScore < 5 && computerScore < 5)
+        playRound("scissor")
+});
+
+
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
@@ -60,14 +82,15 @@ function calculateRoundWinner(humanChoice, computerChoice) {
 }
 
 function announceRoundWinner(res, humanChoice, computerChoice) {
-    if (humanScore === 5 || computerScore ===5) {
+    
+    let results = document.querySelector("#results");
+    results.textContent = `${res} \nyou chose ${humanChoice} and the computer chose ${computerChoice}.`;
+    let score = document.querySelector("#score");
+    score.textContent = humanScore + '\xa0\xa0\xa0\xa0\xa0' + computerScore
+    if (humanScore === 5 || computerScore === 5) {
         announceWinner();
         return;
     }
-    div = document.querySelector("#results");
-    div.textContent = `${res} \nyou chose ${humanChoice} and the computer got ${computerChoice}.\n`;
-    div.textContent += `You: ${humanScore} - CPU: ${computerScore}\n`
-
 }
 
 
@@ -81,25 +104,5 @@ function announceWinner() {
     }
     humanScore = 0;
     computerScore = 0;
-    div.textContent += "  Ready for more?";
+    div.innerHTML += "  <span>Ready for more? </span><a href='index.html'>play again</a>";
 }
-
-rockButton = document.querySelector("#rock");
-paperButton = document.querySelector("#paper");
-scissorButton = document.querySelector("#scissor");
-
-rockButton.addEventListener("click", () => {
-    console.log("rock pressed");
-    if (humanScore < 5 && computerScore < 5)
-        playRound("rock");
-});
-paperButton.addEventListener("click", () => {
-    console.log("paper pressed");
-    if (humanScore < 5 && computerScore < 5)
-        playRound("paper");
-});
-scissorButton.addEventListener("click", () => {
-    console.log("scissor pressed");
-    if (humanScore < 5 && computerScore < 5)
-        playRound("scissor")
-});

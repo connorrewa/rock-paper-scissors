@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <link rel="stylesheet" href="style.css">
+    <script src="game.js" defer></script>
+
 </head>
+
 <body>
-   <button id="rock">Rock</button>
-   <button id="paper">Paper</button>
-   <button id="scissor">Scissors</button>
-    <div id="results"></div>
-   <script src="game.js"></script>
+    <div class="container">
+        <div class="button-container">
+            <button id="rock">rock</button>
+            <button id="paper">paper</button>
+            <button id="scissor">scissors</button>
+        </div>
+        <div id="results">rock paper scissors! try your best to beat me but you probably can't.</div>
+        <div id="score">0 &nbsp&nbsp&nbsp   0</div>
+        <div class="names">You &nbsp&nbsp   CPU</div>
+
+    </div>
 </body>
+
 </html>
